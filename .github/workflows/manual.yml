@@ -27,9 +27,9 @@ jobs:
         if: success()
         uses: actions/upload-artifact@v1
         with:
-          name: deploy_dist
+          name: $GITHUB_SHA
           path: dist
       - name: Download build
         uses: actions/download-artifact@v1
         with:
-          name: deploy_dist
+          name: $GITHUB_SHA
